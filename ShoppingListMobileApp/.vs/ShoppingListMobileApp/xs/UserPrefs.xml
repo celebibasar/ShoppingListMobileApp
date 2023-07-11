@@ -1,28 +1,34 @@
 ﻿<Properties StartupConfiguration="{3B02A105-9713-475E-A375-CB339C590FFB}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingListMobileApp/MainPage.xaml">
     <Files>
-      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" />
-      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="13" Column="40" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="62" Column="31" />
+      <File FileName="ShoppingListMobileApp/App.xaml.cs" Line="14" Column="2" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" Line="17" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShoppingListMobileApp" expanded="True">
             <Node name="ShoppingListMobileApp">
-              <Node name="MainPage.xaml" expanded="True" selected="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Images" expanded="True">
+                  <Node name="profile_image.png" selected="True" />
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
