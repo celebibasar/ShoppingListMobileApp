@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{3B02A105-9713-475E-A375-CB339C590FFB}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingListMobileApp/MainPage.xaml">
+    <Files>
+      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="13" Column="40" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShoppingListMobileApp" expanded="True">
+            <Node name="ShoppingListMobileApp">
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

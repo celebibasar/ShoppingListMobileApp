@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingListMobileApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="monovi_logo_grey.png"
+                SemanticProperties.Description="Welcome to Monovi Shopping List!"
+                HeightRequest="150"
+                WidthRequest="150"
+                HorizontalOptions="Center" />
+            <VerticalStackLayout
+                Spacing="10">
+                <Label
+                Text="Welcome to Monovi Shopping List!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                />
+                <Label
+                Text="Login to your account."
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                />
+
+            </VerticalStackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="26" BorderColor="White">
+                    <Image Source="profile_image.png" HeightRequest="20" WidthRequest="20"></Image>
+
+                </Frame>
+                <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Username" Keyboard="Email"></Entry>
+
+                </Frame>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="26" BorderColor="White">
+                    <Image Source="profile_image.png" HeightRequest="20" WidthRequest="20"></Image>
+
+                </Frame>
+                <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Keyboard="Email"></Entry>
+
+                </Frame>
+
+            </StackLayout>
+            
+
+            <Button
+                x:Name="SignInBtn"
+                Text="Sign In"
+                SemanticProperties.Hint="You can login to your account!"
+                Clicked="OnCounterClicked"
+                WidthRequest="100"
+                CornerRadius="50"
+                TextColor="Black"
+                FontAttributes="Bold"
+                BackgroundColor="Red"
+                HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal"
+                         Spacing="5"
+                         HorizontalOptions="Center">
+                <Label TextColor="Grey" Text="Don't have any account?"></Label>
+                <Label TextColor="Red" Text="Sign Up"></Label>
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
