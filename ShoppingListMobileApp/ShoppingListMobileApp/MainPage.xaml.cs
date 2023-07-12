@@ -1,25 +1,31 @@
-﻿namespace ShoppingListMobileApp;
+﻿using ShoppingListMobileApp;
+using Microsoft.Maui.Controls;
+using System;
+
+namespace ShoppingListMobileApp;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private void OnButtonClick(object sender, EventArgs e)
 	{
-		count++;
+        Navigation.PushAsync(new RegisterPageView());
+    }
 
-		if (count == 1)
-			SignInBtn.Text = $"Clicked {count} time";
-		else
-			SignInBtn.Text = $"Clicked {count} times";
+    private void OnCounterClicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ItemPageView());
+    }
 
-		SemanticScreenReader.Announce(SignInBtn.Text);
-	}
+    void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+    }
 }
 
 

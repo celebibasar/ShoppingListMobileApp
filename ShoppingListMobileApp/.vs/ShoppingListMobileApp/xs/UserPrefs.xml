@@ -1,22 +1,26 @@
 ﻿<Properties StartupConfiguration="{3B02A105-9713-475E-A375-CB339C590FFB}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingListMobileApp/MainPage.xaml">
     <Files>
-      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="62" Column="31" />
-      <File FileName="ShoppingListMobileApp/App.xaml.cs" Line="14" Column="2" />
-      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" Line="17" Column="45" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="75" Column="63" />
+      <File FileName="ShoppingListMobileApp/App.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/AppShell.xaml" Line="1" Column="1" />
+      <File FileName="ShoppingListMobileApp/App.xaml" Line="1" Column="1" />
+      <File FileName="ShoppingListMobileApp/MauiProgram.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShoppingListMobileApp" expanded="True">
             <Node name="ShoppingListMobileApp">
-              <Node name="Resources" expanded="True">
-                <Node name="Images" expanded="True">
-                  <Node name="profile_image.png" selected="True" />
-                </Node>
-              </Node>
-              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,11 +28,5 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

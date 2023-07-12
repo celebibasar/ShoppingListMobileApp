@@ -58,9 +58,17 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\monovi-logo-grey.png" />
 	  <None Remove="Resources\Images\profile_image.png" />
+	  <None Remove="Controllers\" />
+	  <None Remove="Views\" />
+	  <None Remove="DataSources\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
 	  <BundleResource Include="Resources\Images\profile_image.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Controllers\" />
+	  <Folder Include="Views\" />
+	  <Folder Include="DataSources\" />
 	</ItemGroup>
 </Project>

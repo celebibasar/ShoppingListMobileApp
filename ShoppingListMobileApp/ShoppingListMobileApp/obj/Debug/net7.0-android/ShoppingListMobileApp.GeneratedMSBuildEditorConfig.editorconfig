@@ -43,3 +43,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/ItemPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.ItemPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ItemPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ItemPageView.xaml
+
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/RegisterPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.RegisterPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/RegisterPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/RegisterPageView.xaml

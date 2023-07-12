@@ -436,3 +436,5 @@
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/ShoppingListMobileApp.pdb
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/ShoppingListMobileApp.genruntimeconfig.cache
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/ref/ShoppingListMobileApp.dll
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/monovi_logo_grey.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/profile_image.png

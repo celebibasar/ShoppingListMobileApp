@@ -69,10 +69,13 @@
                 BackgroundColor="Red"
                 HorizontalOptions="Center" />
             <StackLayout Orientation="Horizontal"
-                         Spacing="5"
                          HorizontalOptions="Center">
-                <Label TextColor="Grey" Text="Don't have any account?"></Label>
-                <Label TextColor="Red" Text="Sign Up"></Label>
+                <Label VerticalOptions="Center" Text="Don't have any account?">
+                    
+                </Label>
+                <Button Padding="3" Clicked="OnButtonClick" VerticalOptions="Center" Text="Sign Up" TextColor="Red" BackgroundColor="Transparent" BorderColor="Transparent"></Button>
+
+
 
             </StackLayout>
 
