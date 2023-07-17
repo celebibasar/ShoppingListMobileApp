@@ -960,6 +960,13 @@
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/lp/153/jl/files.cache
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/lp/155/jl/files.cache
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/profile_image.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/f/Epilogue-Medium.ttf
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/beauty.jpg
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/cinderella.jpg
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/hood.jpg
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/rapunzel.jpg
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/snow.jpg
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/f/fontello.ttf
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/mscorlib.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/System.Collections.Concurrent.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/System.Data.Common.dll

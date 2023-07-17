@@ -61,14 +61,35 @@
 	  <None Remove="Controllers\" />
 	  <None Remove="Views\" />
 	  <None Remove="DataSources\" />
+	  <None Remove="Resources\Fonts\Epilogue-Medium.ttf" />
+	  <None Remove="Models\" />
+	  <None Remove="Resources\Images\beauty.jpg" />
+	  <None Remove="Resources\Images\cinderella.jpg" />
+	  <None Remove="Resources\Images\hood.jpg" />
+	  <None Remove="Resources\Images\rapunzel.jpg" />
+	  <None Remove="Resources\Images\snow.jpg" />
+	  <None Remove="Resources\Fonts\fontello.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
 	  <BundleResource Include="Resources\Images\profile_image.png" />
+	  <BundleResource Include="Resources\Fonts\Epilogue-Medium.ttf" />
+	  <BundleResource Include="Resources\Images\beauty.jpg" />
+	  <BundleResource Include="Resources\Images\cinderella.jpg" />
+	  <BundleResource Include="Resources\Images\hood.jpg" />
+	  <BundleResource Include="Resources\Images\rapunzel.jpg" />
+	  <BundleResource Include="Resources\Images\snow.jpg" />
+	  <BundleResource Include="Resources\Fonts\fontello.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="DataSources\" />
+	  <Folder Include="Models\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Views\ProfilePage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

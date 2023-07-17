@@ -40,11 +40,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Reso
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/EditPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.EditPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EditPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EditPageView.xaml
+
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/ItemPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.ItemPageView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/ItemPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ItemPageView.xaml
+
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ProfilePage.xaml
 
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/RegisterPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
