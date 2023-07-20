@@ -69,6 +69,11 @@
 	  <None Remove="Resources\Images\rapunzel.jpg" />
 	  <None Remove="Resources\Images\snow.jpg" />
 	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Images\password2.png" />
+	  <None Remove="Resources\Images\password.svg" />
+	  <None Remove="Resources\Images\edit.svg" />
+	  <None Remove="Resources\Images\avatar.svg" />
+	  <None Remove="Resources\Images\email.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
@@ -80,6 +85,11 @@
 	  <BundleResource Include="Resources\Images\rapunzel.jpg" />
 	  <BundleResource Include="Resources\Images\snow.jpg" />
 	  <BundleResource Include="Resources\Fonts\fontello.ttf" />
+	  <BundleResource Include="Resources\Images\password2.png" />
+	  <BundleResource Include="Resources\Images\password.svg" />
+	  <BundleResource Include="Resources\Images\edit.svg" />
+	  <BundleResource Include="Resources\Images\avatar.svg" />
+	  <BundleResource Include="Resources\Images\email.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
