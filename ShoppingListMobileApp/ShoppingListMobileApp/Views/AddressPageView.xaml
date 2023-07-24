@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShoppingListMobileApp"
+             x:Class="ShoppingListMobileApp.AddressPageView"
+             >
+    <ContentPage.BindingContext>
+        <viewModels:AddressViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+            <!-- Address List -->
+            <ListView ItemsSource="{Binding Addresses}" 
+                      SelectionMode="Single"
+                      SelectedItem="{Binding SelectedAddress}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FullAddress}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Address Details -->
+            <StackLayout IsVisible="{Binding IsAddressSelected}">
+                <Label Text="Selected Address" FontSize="Title" HorizontalOptions="Center" />
+                <Label Text="{Binding SelectedAddress.FullAddress}" FontSize="Large" HorizontalOptions="Center" />
+
+                <Button Text="Edit" Command="{Binding EditCommand}" />
+                <Button Text="Delete" Command="{Binding DeleteCommand}" />
+            </StackLayout>
+
+            <!-- Add Address Section -->
+            <StackLayout IsVisible="{Binding IsAddingAddress}">
+                <Label Text="Add Address" FontSize="Title" HorizontalOptions="Center" />
+
+                <Entry Text="{Binding NewAddress}" Placeholder="Enter Address" />
+
+                <Button Text="Save" Command="{Binding SaveAddressCommand}" />
+                <Button Text="Cancel" Command="{Binding CancelAddAddressCommand}" />
+            </StackLayout>
+
+            <!-- Add Address Button -->
+            <Button Text="Add Address" Command="{Binding AddAddressCommand}" />
+        </StackLayout>
+
+</ContentPage>
+    

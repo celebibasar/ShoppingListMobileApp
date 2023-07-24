@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewModels="clr-namespace:ShoppingListMobileApp"
+             x:Class="ShoppingListMobileApp.EditAddressPage">
+    <ContentPage.BindingContext>
+        <viewModels:AddressViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Edit Address" FontSize="Title" HorizontalOptions="Center" />
+
+            <Entry Text="{Binding EditedAddress.FullAddress}" Placeholder="Enter Address" />
+
+            <Button Text="Save Changes" Command="{Binding SaveChangesCommand}" />
+            <Button Text="Cancel" Command="{Binding CancelCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

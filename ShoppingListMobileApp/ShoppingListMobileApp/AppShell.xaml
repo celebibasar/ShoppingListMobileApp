@@ -30,6 +30,10 @@
         Title="Cart Page"
         ContentTemplate="{DataTemplate local:CartPageView}"
         Route="CartPageView" />
+    <ShellContent
+        Title="Address Page"
+        ContentTemplate="{DataTemplate local:AddressPageView}"
+        Route="AddressPageView" />
     
 
 
