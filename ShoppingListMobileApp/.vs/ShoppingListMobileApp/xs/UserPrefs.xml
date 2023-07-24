@@ -1,47 +1,36 @@
 ﻿<Properties StartupConfiguration="{3B02A105-9713-475E-A375-CB339C590FFB}|Default">
-  <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingListMobileApp/Views/ItemPageView.xaml.cs">
     <Files>
-      <File FileName="ShoppingListMobileApp/MainPage.xaml" Line="58" Column="13" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml" />
       <File FileName="ShoppingListMobileApp/App.xaml.cs" />
-      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="ShoppingListMobileApp/AppShell.xaml" Line="28" Column="32" />
+      <File FileName="ShoppingListMobileApp/MainPage.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/AppShell.xaml" />
       <File FileName="ShoppingListMobileApp/App.xaml" />
       <File FileName="ShoppingListMobileApp/MauiProgram.cs" />
-      <File FileName="ShoppingListMobileApp/Views/RegisterPageView.xaml.cs" Line="1" Column="1" />
-      <File FileName="ShoppingListMobileApp/Views/ItemPageView.xaml" Line="209" Column="1" />
-      <File FileName="ShoppingListMobileApp/Views/ItemPageView.xaml.cs" Line="26" Column="16" />
-      <File FileName="ShoppingListMobileApp/Views/ProfilePage.xaml" Line="19" Column="51" />
-      <File FileName="ShoppingListMobileApp/Views/ProfilePage.xaml.cs" Line="1" Column="1" />
-      <File FileName="ShoppingListMobileApp/Models/FairyTale.cs" Line="1" Column="1" />
+      <File FileName="ShoppingListMobileApp/Views/RegisterPageView.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/Views/ItemPageView.xaml" />
+      <File FileName="ShoppingListMobileApp/Views/ItemPageView.xaml.cs" Line="5" Column="43" />
+      <File FileName="ShoppingListMobileApp/Views/ProfilePage.xaml" />
+      <File FileName="ShoppingListMobileApp/Views/ProfilePage.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/Models/FairyTale.cs" />
       <File FileName="ShoppingListMobileApp/Resources/Styles/Styles.xaml" />
-      <File FileName="ShoppingListMobileApp/Views/RegisterPageView.xaml" Line="1" Column="1" />
-      <File FileName="ShoppingListMobileApp/Views/EditPageView.xaml" Line="54" Column="93" />
-      <File FileName="ShoppingListMobileApp/Views/EditPageView.xaml.cs" Line="16" Column="10" />
-      <File FileName="ShoppingListMobileApp/Views/CartPageView.xaml" Line="5" Column="15" />
-      <File FileName="ShoppingListMobileApp/Views/CartPageView.xaml.cs" Line="33" Column="52" />
-      <File FileName="ShoppingListMobileApp/Views/CartView.cs" Line="13" Column="1" />
-      <File FileName="ShoppingListMobileApp/Models/CartItem.cs" Line="20" Column="1" />
-      <File FileName="ShoppingListMobileApp/DataSources/Product.cs" Line="1" Column="1" />
+      <File FileName="ShoppingListMobileApp/Views/RegisterPageView.xaml" />
+      <File FileName="ShoppingListMobileApp/Views/EditPageView.xaml" />
+      <File FileName="ShoppingListMobileApp/Views/EditPageView.xaml.cs" />
+      <File FileName="ShoppingListMobileApp/DataSources/Product.cs" />
+      <File FileName="ShoppingListMobileApp/Views/CartPageView.xaml" />
+      <File FileName="ShoppingListMobileApp/Views/CartPageView.xaml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShoppingListMobileApp" expanded="True">
-            <Node name="ShoppingListMobileApp">
-              <Node name="DataSources" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="Images" expanded="True" />
-              </Node>
-              <Node name="Views">
-                <Node name="CartPageView.xaml" expanded="True" />
-                <Node name="ItemPageView.xaml">
-                  <Node name="ItemPageView.xaml.cs" selected="True" />
-                </Node>
-                <Node name="RegisterPageView.xaml" expanded="True" />
+            <Node name="ShoppingListMobileApp" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="ItemPageView.xaml" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -49,10 +38,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ShoppingListMobileApp PreferredExecutionTarget="Android.pixel_5_-_api_33" />
 </Properties>

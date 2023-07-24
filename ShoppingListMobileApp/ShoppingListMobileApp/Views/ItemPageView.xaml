@@ -113,10 +113,10 @@
 
             <Label
                 Grid.Row="4"
-                Margin="25,10,25,10"
+                Margin="25,5,25,10"
                 FontSize="16"
                 Text="Recommended for you"
-                TextColor="White"
+                TextColor="Black"
                 VerticalOptions="Center"/>
             <CollectionView Grid.Row="5"
                             ItemsSource="{Binding FairyTales2}">

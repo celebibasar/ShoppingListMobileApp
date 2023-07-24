@@ -4,6 +4,9 @@
 <dict>
   <key>UIAppFonts</key>
   <array>
+	<string>Epilogue-Medium.ttf</string>
+	<string>fontello.ttf</string>
+	<string>MauiInfo.plist</string>
 	<string>OpenSans-Regular.ttf</string>
 	<string>OpenSans-Semibold.ttf</string>
   </array>

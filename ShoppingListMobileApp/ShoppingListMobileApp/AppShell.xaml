@@ -26,6 +26,11 @@
         Title="Edit Page"
         ContentTemplate="{DataTemplate local:EditPageView}"
         Route="EditPageView" />
+    <ShellContent
+        Title="Cart Page"
+        ContentTemplate="{DataTemplate local:CartPageView}"
+        Route="CartPageView" />
+    
 
 
 </Shell>
