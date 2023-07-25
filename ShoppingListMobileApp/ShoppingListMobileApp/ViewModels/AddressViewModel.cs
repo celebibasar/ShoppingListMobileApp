@@ -25,6 +25,7 @@ namespace ShoppingListMobileApp
 
             // Yeni adres eklemeyi gizle
             IsAddingAddress = false;
+            AddAddressButton = true;
         }
 
         // Adresler koleksiyonu
@@ -64,6 +65,17 @@ namespace ShoppingListMobileApp
             {
                 isAddingAddress = value;
                 OnPropertyChanged();
+            }
+        }
+        private bool addAddressButton;
+        public bool AddAddressButton
+        {
+            get { return addAddressButton; }
+            set
+            {
+                addAddressButton = value;
+                OnPropertyChanged();
+
             }
         }
 
@@ -118,6 +130,8 @@ namespace ShoppingListMobileApp
         {
             // Yeni adres eklemeyi göster
             IsAddingAddress = true;
+            IsAddressSelected = false;
+            AddAddressButton = false;
         }
 
         // Yeni adresi kaydetme komutu işlemi
@@ -128,6 +142,8 @@ namespace ShoppingListMobileApp
 
             // Yeni adres eklemeyi gizle ve formu sıfırla
             IsAddingAddress = false;
+            
+            AddAddressButton = true;
             NewAddress = string.Empty;
         }
 
@@ -136,7 +152,9 @@ namespace ShoppingListMobileApp
         {
             // Yeni adres eklemeyi gizle ve formu sıfırla
             IsAddingAddress = false;
+            
             NewAddress = string.Empty;
+            AddAddressButton = true;
         }
     }
 

@@ -34,6 +34,10 @@
         Title="Address Page"
         ContentTemplate="{DataTemplate local:AddressPageView}"
         Route="AddressPageView" />
+    <ShellContent
+        Title="Contact Page"
+        ContentTemplate="{DataTemplate local:ContactPageView}"
+        Route="ContactPageView" />
     
 
 

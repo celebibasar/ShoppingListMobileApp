@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.View
 build_metadata.AdditionalFiles.TargetPath = Views/CartPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/CartPageView.xaml
 
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/ContactPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.ContactPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ContactPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ContactPageView.xaml
+
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/EditAddressPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.EditAddressPage.xaml

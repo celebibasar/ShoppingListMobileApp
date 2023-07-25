@@ -15,9 +15,24 @@
             <Label Text="Edit Address" FontSize="Title" HorizontalOptions="Center" />
 
             <Entry Text="{Binding EditedAddress.FullAddress}" Placeholder="Enter Address" />
+            <StackLayout Orientation="Horizontal" Padding="10" Margin="10,10,10,10" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Button Text="Save Changes" Command="{Binding SaveChangesCommand}"
+                    WidthRequest="150"
+                        CornerRadius="50"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Red"
+                        HorizontalOptions="Center"/>
+            <Button Text="Back" Command="{Binding CancelCommand}"
+                    WidthRequest="100"
+                        CornerRadius="50"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Red"
+                        HorizontalOptions="Center"/>
 
-            <Button Text="Save Changes" Command="{Binding SaveChangesCommand}" />
-            <Button Text="Cancel" Command="{Binding CancelCommand}" />
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

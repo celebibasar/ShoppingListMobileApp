@@ -11,6 +11,7 @@
             <!-- Address List -->
             <ListView ItemsSource="{Binding Addresses}" 
                       SelectionMode="Single"
+                      
                       SelectedItem="{Binding SelectedAddress}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -20,12 +21,28 @@
             </ListView>
 
             <!-- Address Details -->
-            <StackLayout IsVisible="{Binding IsAddressSelected}">
+            <StackLayout IsVisible="{Binding IsAddressSelected}" Margin="10,10,10,10">
                 <Label Text="Selected Address" FontSize="Title" HorizontalOptions="Center" />
                 <Label Text="{Binding SelectedAddress.FullAddress}" FontSize="Large" HorizontalOptions="Center" />
+                <StackLayout Orientation="Horizontal" Padding="10" Margin="10,10,10,10" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Edit Address" Command="{Binding EditCommand}"
 
-                <Button Text="Edit" Command="{Binding EditCommand}" />
-                <Button Text="Delete" Command="{Binding DeleteCommand}" />
+                        WidthRequest="150"
+                        CornerRadius="50"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Red"
+                        HorizontalOptions="Center"/>
+                    <Button Text="Delete Address" Command="{Binding DeleteCommand}"
+                            WidthRequest="150"
+                            CornerRadius="50"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            BackgroundColor="Red"
+                            HorizontalOptions="Center"/>
+
+                </StackLayout>
+                
             </StackLayout>
 
             <!-- Add Address Section -->
@@ -33,13 +50,37 @@
                 <Label Text="Add Address" FontSize="Title" HorizontalOptions="Center" />
 
                 <Entry Text="{Binding NewAddress}" Placeholder="Enter Address" />
+                <StackLayout Orientation="Horizontal" Padding="10" Margin="10,10,10,10" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Save" Command="{Binding SaveAddressCommand}"
+                        WidthRequest="100"
+                        CornerRadius="50"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Red"
+                        HorizontalOptions="Center"/>
+                    <Button Text="Cancel" Command="{Binding CancelAddAddressCommand}"
+                            WidthRequest="100"
+                            CornerRadius="50"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            BackgroundColor="Red"
+                            HorizontalOptions="Center"/>
 
-                <Button Text="Save" Command="{Binding SaveAddressCommand}" />
-                <Button Text="Cancel" Command="{Binding CancelAddAddressCommand}" />
+
+                </StackLayout>
+                
             </StackLayout>
 
             <!-- Add Address Button -->
-            <Button Text="Add Address" Command="{Binding AddAddressCommand}" />
+            <Button Text="Add Address" Command="{Binding AddAddressCommand}"
+                    IsVisible="{Binding AddAddressButton}"
+                    Margin="10,10,10,10"
+                    WidthRequest="150"
+                        CornerRadius="50"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Red"
+                        HorizontalOptions="Center"/>
         </StackLayout>
 
 </ContentPage>
