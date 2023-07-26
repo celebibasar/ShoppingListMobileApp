@@ -38,6 +38,10 @@
         Title="Contact Page"
         ContentTemplate="{DataTemplate local:ContactPageView}"
         Route="ContactPageView" />
+    <ShellContent
+        Title="Item Detail Page"
+        ContentTemplate="{DataTemplate local:ItemDetailPageView}"
+        Route="ItemDetailPageView" />
     
     
 

@@ -101,13 +101,10 @@ namespace ShoppingListMobileApp
         // Düzenleme komutu işlemi
         private void OnEdit()
         {
-            // Seçili adresi düzenlemek için gerekli işlemler yapabilirsiniz
-            // Örneğin, düzenleme sayfasına yönlendirebilir veya pop-up açabilirsiniz
-
-            // Seçili adresi null kontrolü yaparak düzenleme sayfasına gönderelim
+            
             if (SelectedAddress != null)
             {
-                // TODO: Düzenleme işlemleri için gerekli kodları buraya ekleyin
+               
                 Application.Current.MainPage.Navigation.PushAsync(new EditAddressPage(selectedAddress));
             }
         }

@@ -77,6 +77,9 @@
 	  <None Remove="Resources\Images\delete2.png" />
 	  <None Remove="Resources\Images\edit2.png" />
 	  <None Remove="ViewModels\" />
+	  <None Remove="Resources\Images\laptop.jpeg" />
+	  <None Remove="Resources\Fonts\Rubik-Light.ttf" />
+	  <None Remove="Resources\Fonts\Rubik-Regular.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
@@ -95,6 +98,9 @@
 	  <BundleResource Include="Resources\Images\email.png" />
 	  <BundleResource Include="Resources\Images\delete2.png" />
 	  <BundleResource Include="Resources\Images\edit2.png" />
+	  <BundleResource Include="Resources\Images\laptop.jpeg" />
+	  <BundleResource Include="Resources\Fonts\Rubik-Light.ttf" />
+	  <BundleResource Include="Resources\Fonts\Rubik-Regular.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
