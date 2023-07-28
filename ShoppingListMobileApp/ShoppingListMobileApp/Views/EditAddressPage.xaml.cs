@@ -1,4 +1,4 @@
-﻿using Android.Locations;
+﻿
 
 namespace ShoppingListMobileApp;
 

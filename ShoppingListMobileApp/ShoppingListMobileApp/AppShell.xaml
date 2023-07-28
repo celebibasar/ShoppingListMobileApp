@@ -42,6 +42,19 @@
         Title="Item Detail Page"
         ContentTemplate="{DataTemplate local:ItemDetailPageView}"
         Route="ItemDetailPageView" />
+    <ShellContent
+        Title="Forgot Password Page"
+        ContentTemplate="{DataTemplate local:ForgotPasswordPageView}"
+        Route="ForgotPasswordPageView" />
+    <ShellContent
+        Title="Checkout Page"
+        ContentTemplate="{DataTemplate local:CheckoutPageView}"
+        Route="CheckoutPageView" />
+    <ShellContent
+        Title="Verification Page"
+        ContentTemplate="{DataTemplate local:VerificationPageView}"
+        Route="VerificationPageView" />
+    
     
     
 

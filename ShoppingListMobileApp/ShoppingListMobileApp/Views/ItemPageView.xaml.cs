@@ -1,8 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using Microsoft.Maui.Handlers;
-using ShoppingListMobileApp.DataSources;
 using ShoppingListMobileApp.Models;
-using Xamarin.KotlinX.Coroutines.Channels;
 
 namespace ShoppingListMobileApp;
 

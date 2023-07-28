@@ -11,9 +11,9 @@ namespace ShoppingListMobileApp
             // Örnek hayali adresler oluştur
             Addresses = new ObservableCollection<Address>
             {
-                new Address { FullAddress = "123 Main St, City A, Country" },
-                new Address { FullAddress = "456 Elm St, City B, Country" },
-                new Address { FullAddress = "789 Oak St, City C, Country" }
+                new Address {Name = "Ev", Country = "Country A", City = "City A", Neighborhood = "Neighborhood A", PostalCode = "12345", AddressText = "123 Main St" },
+                new Address {Name = "İş", Country = "Country B", City = "City B", Neighborhood = "Neighborhood B", PostalCode = "67890", AddressText = "456 Elm St" },
+                new Address {Name = "Okul", Country = "Country C", City = "City C", Neighborhood = "Neighborhood C", PostalCode = "54321", AddressText = "789 Oak St" }
             };
 
             // Komutlar oluştur
@@ -25,6 +25,7 @@ namespace ShoppingListMobileApp
 
             // Yeni adres eklemeyi gizle
             IsAddingAddress = false;
+            IsAddressSelected = false;
             AddAddressButton = true;
         }
 
@@ -67,6 +68,7 @@ namespace ShoppingListMobileApp
                 OnPropertyChanged();
             }
         }
+
         private bool addAddressButton;
         public bool AddAddressButton
         {
@@ -75,18 +77,71 @@ namespace ShoppingListMobileApp
             {
                 addAddressButton = value;
                 OnPropertyChanged();
-
             }
         }
 
         // Yeni eklenen adres
-        private string newAddress;
-        public string NewAddress
+        private string newName;
+        public string NewName
         {
-            get { return newAddress; }
+            get { return newName; }
             set
             {
-                newAddress = value;
+                newName = value;
+                OnPropertyChanged();
+            }
+        }
+        private string newCountry;
+        public string NewCountry
+        {
+            get { return newCountry; }
+            set
+            {
+                newCountry = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newCity;
+        public string NewCity
+        {
+            get { return newCity; }
+            set
+            {
+                newCity = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newNeighborhood;
+        public string NewNeighborhood
+        {
+            get { return newNeighborhood; }
+            set
+            {
+                newNeighborhood = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newPostalCode;
+        public string NewPostalCode
+        {
+            get { return newPostalCode; }
+            set
+            {
+                newPostalCode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newAddressText;
+        public string NewAddressText
+        {
+            get { return newAddressText; }
+            set
+            {
+                newAddressText = value;
                 OnPropertyChanged();
             }
         }
@@ -101,10 +156,8 @@ namespace ShoppingListMobileApp
         // Düzenleme komutu işlemi
         private void OnEdit()
         {
-            
             if (SelectedAddress != null)
             {
-               
                 Application.Current.MainPage.Navigation.PushAsync(new EditAddressPage(selectedAddress));
             }
         }
@@ -135,13 +188,25 @@ namespace ShoppingListMobileApp
         private void OnSaveAddress()
         {
             // Yeni adresi koleksiyona ekleyelim
-            Addresses.Add(new Address { FullAddress = NewAddress });
+            Addresses.Add(new Address
+            {
+                Name = NewName,
+                Country = NewCountry,
+                City = NewCity,
+                Neighborhood = NewNeighborhood,
+                PostalCode = NewPostalCode,
+                AddressText = NewAddressText
+            });
 
             // Yeni adres eklemeyi gizle ve formu sıfırla
             IsAddingAddress = false;
-            
             AddAddressButton = true;
-            NewAddress = string.Empty;
+            NewName = string.Empty;
+            NewCountry = string.Empty;
+            NewCity = string.Empty;
+            NewNeighborhood = string.Empty;
+            NewPostalCode = string.Empty;
+            NewAddressText = string.Empty;
         }
 
         // Yeni adres eklemeyi iptal etme komutu işlemi
@@ -149,14 +214,81 @@ namespace ShoppingListMobileApp
         {
             // Yeni adres eklemeyi gizle ve formu sıfırla
             IsAddingAddress = false;
-            
-            NewAddress = string.Empty;
             AddAddressButton = true;
+            NewName = string.Empty;
+            NewCountry = string.Empty;
+            NewCity = string.Empty;
+            NewNeighborhood = string.Empty;
+            NewPostalCode = string.Empty;
+            NewAddressText = string.Empty;
         }
     }
 
-    public class Address
+    public class Address : BindableObject
     {
-        public string FullAddress { get; set; }
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+        private string country;
+        public string Country
+        {
+            get { return country; }
+            set
+            {
+                country = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string city;
+        public string City
+        {
+            get { return city; }
+            set
+            {
+                city = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string neighborhood;
+        public string Neighborhood
+        {
+            get { return neighborhood; }
+            set
+            {
+                neighborhood = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string postalCode;
+        public string PostalCode
+        {
+            get { return postalCode; }
+            set
+            {
+                postalCode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string addressText;
+        public string AddressText
+        {
+            get { return addressText; }
+            set
+            {
+                addressText = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

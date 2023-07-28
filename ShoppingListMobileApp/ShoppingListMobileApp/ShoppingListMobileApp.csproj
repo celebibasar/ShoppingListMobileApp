@@ -80,6 +80,13 @@
 	  <None Remove="Resources\Images\laptop.jpeg" />
 	  <None Remove="Resources\Fonts\Rubik-Light.ttf" />
 	  <None Remove="Resources\Fonts\Rubik-Regular.ttf" />
+	  <None Remove="Resources\Images\telefon.jpg" />
+	  <None Remove="Resources\Images\watch.jpeg" />
+	  <None Remove="Resources\Images\plus2.png" />
+	  <None Remove="Resources\Images\minus.png" />
+	  <None Remove="Resources\Images\airpods.jpeg" />
+	  <None Remove="Resources\Images\close.png" />
+	  <None Remove="Resources\Images\checkout.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
@@ -101,6 +108,13 @@
 	  <BundleResource Include="Resources\Images\laptop.jpeg" />
 	  <BundleResource Include="Resources\Fonts\Rubik-Light.ttf" />
 	  <BundleResource Include="Resources\Fonts\Rubik-Regular.ttf" />
+	  <BundleResource Include="Resources\Images\telefon.jpg" />
+	  <BundleResource Include="Resources\Images\watch.jpeg" />
+	  <BundleResource Include="Resources\Images\plus2.png" />
+	  <BundleResource Include="Resources\Images\minus.png" />
+	  <BundleResource Include="Resources\Images\airpods.jpeg" />
+	  <BundleResource Include="Resources\Images\close.png" />
+	  <BundleResource Include="Resources\Images\checkout.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />

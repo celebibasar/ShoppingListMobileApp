@@ -13,8 +13,19 @@
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label Text="Edit Address" FontSize="Title" HorizontalOptions="Center" />
+            <!-- Name Entry -->
+            <Entry Text="{Binding EditedAddress.Name}" Placeholder="Enter Country" />
+            <!-- Country Entry -->
+            <Entry Text="{Binding EditedAddress.Country}" Placeholder="Enter Country" />
+            <!-- City Entry -->
+            <Entry Text="{Binding EditedAddress.City}" Placeholder="Enter City" />
+            <!-- Neighborhood Entry -->
+            <Entry Text="{Binding EditedAddress.Neighborhood}" Placeholder="Enter Neighborhood" />
+            <!-- Postal Code Entry -->
+            <Entry Text="{Binding EditedAddress.PostalCode}" Placeholder="Enter Postal Code" />
+            <!-- Address Text Entry -->
+            <Entry Text="{Binding EditedAddress.AddressText}" Placeholder="Enter Address" />
 
-            <Entry Text="{Binding EditedAddress.FullAddress}" Placeholder="Enter Address" />
             <StackLayout Orientation="Horizontal" Padding="10" Margin="10,10,10,10" Spacing="10" HorizontalOptions="CenterAndExpand">
                 <Button Text="Save Changes" Command="{Binding SaveChangesCommand}"
                     WidthRequest="150"
@@ -23,14 +34,13 @@
                         FontAttributes="Bold"
                         BackgroundColor="Red"
                         HorizontalOptions="Center"/>
-            <Button Text="Back" Command="{Binding CancelCommand}"
+                <Button Text="Back" Command="{Binding CancelCommand}"
                     WidthRequest="100"
                         CornerRadius="50"
                         TextColor="Black"
                         FontAttributes="Bold"
                         BackgroundColor="Red"
                         HorizontalOptions="Center"/>
-
             </StackLayout>
             
         </StackLayout>
