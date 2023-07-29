@@ -54,6 +54,18 @@
         Title="Verification Page"
         ContentTemplate="{DataTemplate local:VerificationPageView}"
         Route="VerificationPageView" />
+    <ShellContent
+        Title="Home Page"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
+    <ShellContent
+        Title="Technology Page"
+        ContentTemplate="{DataTemplate local:TechnologyPage}"
+        Route="TechnologyPage" />
+    <ShellContent
+        Title="Phones Page"
+        ContentTemplate="{DataTemplate local:PhonePage}"
+        Route="PhonePage" />
     
     
     
