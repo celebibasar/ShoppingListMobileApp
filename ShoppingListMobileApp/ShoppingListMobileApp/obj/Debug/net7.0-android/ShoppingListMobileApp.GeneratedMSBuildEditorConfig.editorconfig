@@ -104,6 +104,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.View
 build_metadata.AdditionalFiles.TargetPath = Views/ItemPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ItemPageView.xaml
 
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/NotificationsPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.NotificationsPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/NotificationsPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/NotificationsPageView.xaml
+
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/OnPlaceOrderView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.OnPlaceOrderView.xaml

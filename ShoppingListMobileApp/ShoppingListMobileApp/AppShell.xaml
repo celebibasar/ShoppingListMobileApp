@@ -66,6 +66,10 @@
         Title="Phones Page"
         ContentTemplate="{DataTemplate local:PhonePage}"
         Route="PhonePage" />
+    <ShellContent
+        Title="Notifications Page"
+        ContentTemplate="{DataTemplate local:NotificationsPageView}"
+        Route="NotificationsPage" />
     
     
     
