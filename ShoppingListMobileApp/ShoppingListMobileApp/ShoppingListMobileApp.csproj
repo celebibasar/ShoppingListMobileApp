@@ -87,6 +87,10 @@
 	  <None Remove="Resources\Images\airpods.jpeg" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\checkout.png" />
+	  <None Remove="Resources\Images\shopping_done.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\cart.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
@@ -115,6 +119,10 @@
 	  <BundleResource Include="Resources\Images\airpods.jpeg" />
 	  <BundleResource Include="Resources\Images\close.png" />
 	  <BundleResource Include="Resources\Images\checkout.png" />
+	  <BundleResource Include="Resources\Images\shopping_done.png" />
+	  <BundleResource Include="Resources\Images\home.png" />
+	  <BundleResource Include="Resources\Images\user.png" />
+	  <BundleResource Include="Resources\Images\cart.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />

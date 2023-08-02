@@ -7,7 +7,9 @@ namespace ShoppingListMobileApp.ViewModels
 {
     public class NotificationsViewModel : BindableObject
     {
+        private ObservableCollection<Notification> notifications;
         
+
         public NotificationsViewModel()
         {
             // Örnek hayali bildirimler oluştur
@@ -23,7 +25,6 @@ namespace ShoppingListMobileApp.ViewModels
             AddNotificationCommand = new Command(OnAddNotification);
             SaveNotificationCommand = new Command(OnSaveNotification);
             CancelAddNotificationCommand = new Command(OnCancelAddNotification);
-            
 
             // Yeni bildirim eklemeyi gizle
             IsAddingNotification = false;
@@ -32,18 +33,25 @@ namespace ShoppingListMobileApp.ViewModels
         }
 
         // Bildirimler koleksiyonu
-        public ObservableCollection<Notification> Notifications { get; set; }
-
-        // Seçili bildirim
-        private Notification selectedNotification;
-        public Notification SelectedNotification
+        public ObservableCollection<Notification> Notifications
         {
-            get { return selectedNotification; }
+            get => notifications;
             set
             {
-                selectedNotification = value;
+                notifications = value;
                 OnPropertyChanged();
-                IsNotificationSelected = selectedNotification != null;
+            }
+        }
+
+        
+        private int notificationCount;
+        public int NotificationCount
+        {
+            get => notificationCount;
+            set
+            {
+                notificationCount = value;
+                OnPropertyChanged();
             }
         }
 
@@ -110,7 +118,6 @@ namespace ShoppingListMobileApp.ViewModels
         public ICommand AddNotificationCommand { get; }
         public ICommand SaveNotificationCommand { get; }
         public ICommand CancelAddNotificationCommand { get; }
-        
 
         // Bildirim silme komutu işlemi
         private void OnDeleteNotification(Notification notification)
@@ -119,7 +126,7 @@ namespace ShoppingListMobileApp.ViewModels
             if (notification != null)
             {
                 Notifications.Remove(notification);
-                SelectedNotification = null; // Seçili bildirimi sıfırlayalım
+                IsNotificationSelected = false; // Seçili bildirimi sıfırlayalım
             }
         }
 
@@ -149,8 +156,6 @@ namespace ShoppingListMobileApp.ViewModels
             NewTitle = string.Empty;
             NewMessage = string.Empty;
         }
-        // Show Notification komutunu işlemi
-        
 
         // Yeni bildirimi iptal etme komutu işlemi
         private void OnCancelAddNotification()

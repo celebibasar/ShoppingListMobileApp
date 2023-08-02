@@ -17,40 +17,40 @@
                   ColumnSpacing="5"
                   RowDefinitions="*, 75"
                   RowSpacing="0">
-            <ListView ItemsSource="{Binding OrderItems}"
+                <ListView ItemsSource="{Binding OrderItems}"
                       Grid.ColumnSpan="2"
                       RowHeight="125"
                       SelectionMode="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Frame HeightRequest="125"
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Frame HeightRequest="125"
                                        Padding="0">
-                                    <Grid Padding="10"
+                                        <Grid Padding="10"
                                           ColumnDefinitions="125, *">
-                                        <!-- Customize your order item UI here (e.g., display product name and quantity) -->
+                                            <!-- Customize your order item UI here (e.g., display product name and quantity) -->
 
-                                        <!--<StackLayout Orientation="Vertical" Padding="10">-->
-                                        <Image Aspect="AspectFill"
+                                            <!--<StackLayout Orientation="Vertical" Padding="10">-->
+                                            <Image Aspect="AspectFill"
                                                Source="airpods.jpeg"
                                                HeightRequest="100"
                                                WidthRequest="100"
                                                HorizontalOptions="Start"/>
 
-                                        <VerticalStackLayout Grid.Column="1"
+                                            <VerticalStackLayout Grid.Column="1"
                                                              Padding="10"
                                                              VerticalOptions="Center">
-                                            <Label Text="{Binding ProductName}" FontSize="Subtitle" VerticalOptions="Center" />
-                                            <Label Text="{Binding Quantity}" FontSize="Subtitle" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
-                                        </VerticalStackLayout>
-                                    </Grid>
-                                </Frame>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                                <Label Text="{Binding ProductName}" FontSize="Subtitle" VerticalOptions="Center" />
+                                                <Label Text="{Binding Quantity}" FontSize="Subtitle" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                                            </VerticalStackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
 
             <!-- Delivery Address -->
@@ -68,7 +68,7 @@
                                     Margin="0,5,0,0" />
                 </VerticalStackLayout>
             </Frame>
-            
+
             <!-- Display delivery address fields here (e.g., Country, City, Address, etc.) -->
             <!-- Use Entry or Label elements to display/edit the address properties from the ViewModel -->
 

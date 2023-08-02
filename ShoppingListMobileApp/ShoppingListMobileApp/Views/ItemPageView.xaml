@@ -9,7 +9,12 @@
                     HeightRequest="150"
                     WidthRequest="150"
                     HorizontalOptions="Center" />
+        <Button x:Name="NotificationCountLabel" Text="{Binding NotificationCount}" FontSize="12" BackgroundColor="Red" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+        
+
         <Grid Grid.Row="1" Margin="25,10,25,10">
+            
+
             <RoundRectangle Grid.Row="1"
                             CornerRadius="25"
                             Fill="#cc3333"
@@ -18,6 +23,7 @@
                        Placeholder="Search by name"
                        TextColor="White"
                        VerticalOptions="Center"/>
+
             </Grid>
             <CarouselView Grid.Row="2"
                           IndicatorView="indicatorView"

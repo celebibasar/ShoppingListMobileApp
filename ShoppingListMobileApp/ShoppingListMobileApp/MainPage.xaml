@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShoppingListMobileApp.MainPage">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Notifications" Clicked="OnNotificationsClicked" />
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <VerticalStackLayout
             Spacing="15"
@@ -36,24 +38,22 @@
             <StackLayout Orientation="Horizontal">
                 <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="26" BorderColor="White">
                     <Image Source="profile_image.png" HeightRequest="20" WidthRequest="20"></Image>
-
                 </Frame>
                 <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Username" Keyboard="Email"></Entry>
-
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Username" Keyboard="Email"
+                           Text="{Binding Username, Mode=TwoWay}"></Entry>
                 </Frame>
-
             </StackLayout>
+
+            <!-- Parola girişi -->
             <StackLayout Orientation="Horizontal">
                 <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="26" BorderColor="White">
                     <Image Source="password2.png" HeightRequest="20" WidthRequest="20"></Image>
-
                 </Frame>
                 <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Keyboard="Email"></Entry>
-
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Keyboard="Email"
+                           Text="{Binding Password, Mode=TwoWay}"></Entry>
                 </Frame>
-
             </StackLayout>
             
             

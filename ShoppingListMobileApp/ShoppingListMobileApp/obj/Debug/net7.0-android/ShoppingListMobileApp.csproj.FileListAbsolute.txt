@@ -996,6 +996,10 @@
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/checkout.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/cart.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/home.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/shopping_done.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/user.png
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/arm64-v8a/mscorlib.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/arm64-v8a/System.Collections.Concurrent.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/arm64-v8a/System.Data.Common.dll
