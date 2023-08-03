@@ -1,9 +1,20 @@
-﻿namespace ShoppingListMobileApp;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
 
-public partial class ItemDetailPageView : ContentPage
+using ShoppingListMobileApp.ViewModels;
+
+namespace ShoppingListMobileApp
 {
-	public ItemDetailPageView()
-	{
-		InitializeComponent();
-	}
+    public partial class ItemDetailPageView : ContentPage
+    {
+        public ItemDetailPageView()
+        {
+            InitializeComponent();
+            BindingContext = new ItemDetailPageViewModel();
+        }
+    }
 }
