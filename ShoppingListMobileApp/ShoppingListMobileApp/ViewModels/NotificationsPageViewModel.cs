@@ -8,7 +8,7 @@ namespace ShoppingListMobileApp.ViewModels
     public class NotificationsViewModel : BindableObject
     {
         private ObservableCollection<Notification> notifications;
-        
+
 
         public NotificationsViewModel()
         {
@@ -43,7 +43,7 @@ namespace ShoppingListMobileApp.ViewModels
             }
         }
 
-        
+
         private int notificationCount;
         public int NotificationCount
         {
@@ -109,6 +109,21 @@ namespace ShoppingListMobileApp.ViewModels
             set
             {
                 newMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newCountNotification;
+        public string NewCountNotification
+        {
+            get
+            {
+                newCountNotification = (notifications.Count).ToString();
+                return newCountNotification;
+            }
+            set
+            {
+                newCountNotification = value;
                 OnPropertyChanged();
             }
         }

@@ -22,7 +22,7 @@ public partial class ItemPageView : ContentPage
 
         // NotificationCountLabel için güncel bildirim sayısını ata
         viewModel = new NotificationsViewModel();
-        NotificationCountLabel.Text = viewModel.NotificationCount.ToString();
+        NotificationCountLabel.Text = viewModel.NewCountNotification;
         notificationsViewModel = new NotificationsViewModel();
         BindingContext = notificationsViewModel;
 
@@ -71,5 +71,8 @@ public partial class ItemPageView : ContentPage
         Navigation.PushAsync(new ProfilePage());
     }
 
-    
+    private void NotificationCountLabel_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NotificationsPageView());
+    }
 }
