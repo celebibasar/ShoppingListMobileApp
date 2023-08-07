@@ -7,57 +7,91 @@
     <ContentPage.BindingContext>
         <viewModels:VerificationPageViewModel/>
     </ContentPage.BindingContext>
-    <ScrollView VerticalOptions="Center">
-        <VerticalStackLayout
-                Spacing="10"
-                Padding="30,0"
-                VerticalOptions="Center">
 
+    <ContentPage.Content>
+        <StackLayout Margin="40, -20, 40, 20" Spacing="10" Padding="20" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="10" VerticalOptions="CenterAndExpand" Margin="0, -50, 0, 0">
                 <Image
                     Source="monovi_logo_grey.png"
                     SemanticProperties.Description="Welcome to Monovi Shopping List!"
-                    HeightRequest="150"
+                    HeightRequest="75"
                     WidthRequest="150"
                     HorizontalOptions="Center"
                     />
-                <VerticalStackLayout
-                    Spacing="10">
+                
+                <Grid>
+                    <GraphicsView x:Name="ProgressView"
+							BackgroundColor="{StaticResource Primary}"
+							HeightRequest="100"
+							WidthRequest="100"/>
+                    <Button x:Name="ProgressButton" 
+                            Text=""
+                            FontSize="18"
+                            FontFamily="fa-regular"
+                            HeightRequest="80"
+                            WidthRequest="80"
+                            CornerRadius="40"
+                            HorizontalOptions="Center"
+                            IsEnabled="False"
+                            BackgroundColor="{StaticResource Secondary}"/>
+                </Grid>
+                
+                <Button x:Name="ResetButton"
+                        IsVisible="false"
+                        Text="Reset"
+                        Clicked="ResetButton_OnClicked"
+                        TextColor="WhiteSmoke"/>
+                
+                <VerticalStackLayout Spacing="10">
                     <Label
-                    Text="Verification Code"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="24"
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    />
+                        Text="Verification"
+                        FontSize="Title"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                        Margin="0, -5, 0, -5"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="We will send you a " />
+                                <Span Text="One Time Code"
+                                      FontAttributes="Bold">
+                                    <!--<Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                                    </Span.GestureRecognizers>-->
+                                </Span>
+                                <Span Text=" &#10;on your phone number" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
 
-                </VerticalStackLayout>        
-                
-                
                 <StackLayout Orientation="Horizontal">
                     <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="26" BorderColor="White">
                         <Image Source="email.png" HeightRequest="30" WidthRequest="30"></Image>
-
                     </Frame>
+                    
                     <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
                         <Entry Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Text="{Binding VerificationCode}" Placeholder="Enter verification code" IsPassword="False" Keyboard="Email"></Entry>
-
                     </Frame>
-        
-
                 </StackLayout>
+
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="15">
                     <Button Text="Verify" Command="{Binding VerifyCommand}"
                             WidthRequest="100"
-                        CornerRadius="50"
-                        TextColor="Black"
-                        FontAttributes="Bold"
-                        BackgroundColor="Red"
-                        HorizontalOptions="Center"/>
-
+                            Clicked="VerifyButton_Clicked"
+                            CornerRadius="50"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            BackgroundColor="Red"
+                            HorizontalOptions="Center"/>
                 </StackLayout>
-                
-        
-                
+
             </VerticalStackLayout>
-        </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

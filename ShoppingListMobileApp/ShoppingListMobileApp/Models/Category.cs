@@ -6,8 +6,12 @@
 
         public string Name { get; set; }
 
+        public string Icon { get; set; }
+
         public List<CategoryDetail> CategoryDetail { get; set; }
 
 
     }
+    
+
 }
