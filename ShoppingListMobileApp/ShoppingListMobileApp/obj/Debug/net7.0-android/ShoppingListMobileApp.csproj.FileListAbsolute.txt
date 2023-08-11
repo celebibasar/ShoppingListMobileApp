@@ -1000,6 +1000,9 @@
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/home.png
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/shopping_done.png
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/user.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/app.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/categories.png
+/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/resizetizer/r/drawable/menu.png
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/mscorlib.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/System.Collections.Concurrent.dll
 /Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/obj/Debug/net7.0-android/android/assets/System.Data.Common.dll

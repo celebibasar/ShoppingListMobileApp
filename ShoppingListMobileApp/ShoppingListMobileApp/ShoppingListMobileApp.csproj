@@ -91,6 +91,10 @@
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Resources\Images\cart.png" />
+	  <None Remove="Resources\Images\menu.png" />
+	  <None Remove="Resources\Images\app.png" />
+	  <None Remove="Resources\Images\categories.png" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\monovi_logo_grey.png" />
@@ -123,6 +127,9 @@
 	  <BundleResource Include="Resources\Images\home.png" />
 	  <BundleResource Include="Resources\Images\user.png" />
 	  <BundleResource Include="Resources\Images\cart.png" />
+	  <BundleResource Include="Resources\Images\menu.png" />
+	  <BundleResource Include="Resources\Images\app.png" />
+	  <BundleResource Include="Resources\Images\categories.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
@@ -130,6 +137,7 @@
 	  <Folder Include="DataSources\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Views\ProfilePage.xaml">

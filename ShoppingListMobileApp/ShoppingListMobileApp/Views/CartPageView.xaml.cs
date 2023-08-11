@@ -1,82 +1,70 @@
-﻿using Microsoft.Maui.Devices;
+﻿using Microsoft.Maui.Controls;
 using ShoppingListMobileApp.Models;
+using ShoppingListMobileApp.ViewModels;
+using System.Collections.Generic; // Bu satırı ekleyin
+using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using AndroidX.Lifecycle;
 
-namespace ShoppingListMobileApp;
-
-public partial class CartPageView : ContentPage
+namespace ShoppingListMobileApp
 {
-    int clickCountTotal;
-
-    public ObservableCollection<Products> product { get; set; }
-    public CartPageView()
+    public partial class CartPageView : ContentPage
     {
-        InitializeComponent();
-        Products();
-    }
-
-
-    private void Products()
-    {
-        product = new ObservableCollection<Products>()
+        public CartPageView()
         {
-            new Products() {Name = "Apple", Description="Iphone 14 Pro Max", Image="telefon.jpg", Price="1199$"},
-            new Products() {Name = "Monster", Description="Abra A5", Image="laptop.jpeg", Price="999$"},
-            new Products() {Name = "Apple", Description="AirPods", Image="airpods.jpeg", Price="300$"},
-            new Products() {Name = "Apple", Description="Watch Series8", Image="watch.jpeg", Price="259$"},
-            new Products() {Name = "Princes", Description="Cinderella", Image="cinderella.jpg", Price="-$"}
-        };
-    }
-
-    private void checkoutbtn_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-
-        Navigation.PushAsync(new ProfilePage());
-
-    }
-
-    private void Button_Clicked_Home(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new ItemPageView());
-    }
-
-    private void Button_Clicked_Search(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new ItemPageView());
-    }
-
-    private void Button_Clicked_Checkout(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new CheckoutPageView());
-    }
-
-    private void ImageButton_Decrease(object sender, EventArgs e)
-    {
-        if (clickCountTotal == 1)
-        {
-            ImageFrame.IsVisible = false;
-            DetailFrame.IsVisible = false;
-            ButtonCloseFrame.IsVisible = false;
+            InitializeComponent();
         }
-        clickCountTotal -= 1;
-        count.Text = $"{clickCountTotal}";
-    }
+        public void SetBindingContext(BasketDetailsModel basketDetails)
+        {
+            BindingContext = basketDetails;
+        }
 
-    private void ImageButton_Increase(object sender, EventArgs e)
-    {
-        clickCountTotal += 1;
-        count.Text = $"{clickCountTotal}";
-    }
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProfilePage());
+        }
 
-    private void ImageButton_Close(object sender, EventArgs e)
-    {
-        ImageFrame.IsVisible = false;
-        DetailFrame.IsVisible = false;
-        ButtonCloseFrame.IsVisible = false;
+        private void Button_Clicked_Home(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ItemPageView());
+        }
+
+        private void Button_Clicked_Search(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ItemPageView());
+        }
+
+        private void Button_Clicked_Checkout(object sender, EventArgs e)
+        {
+           
+            Navigation.PushAsync(new CheckoutPageView());
+        }
+
+        private void ImageButton_Decrease(object sender, EventArgs e)
+        {
+            if (sender is ImageButton button && button.BindingContext is CartItem cartItem)
+            {
+                var cartViewModel = BindingContext as CartViewModel;
+                cartViewModel?.OnDecreaseQuantity(cartItem);
+            }
+        }
+
+        private void ImageButton_Increase(object sender, EventArgs e)
+        {
+            if (sender is ImageButton button && button.BindingContext is CartItem cartItem)
+            {
+                var cartViewModel = BindingContext as CartViewModel;
+                cartViewModel?.OnIncreaseQuantity(cartItem);
+            }
+        }
+        private void ClearCart_Clicked(object sender, EventArgs e)
+        {
+            // ViewModel referansını alarak ClearCart metotunu çağırın.
+            var viewModel = (CartViewModel)BindingContext;
+            viewModel.ClearCart();
+        }
+
+
     }
 }

@@ -9,6 +9,7 @@ obj/Debug/net7.0-android/resizetizer/r/drawable/email.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/plus2.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/password2.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/beauty.jpg
+obj/Debug/net7.0-android/resizetizer/r/drawable/app.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/cart.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/profile_image.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/monovi_logo_grey.png
@@ -20,10 +21,12 @@ obj/Debug/net7.0-android/resizetizer/r/drawable/cinderella.jpg
 obj/Debug/net7.0-android/resizetizer/r/drawable/edit2.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/minus.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/airpods.jpeg
+obj/Debug/net7.0-android/resizetizer/r/drawable/menu.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/laptop.jpeg
 obj/Debug/net7.0-android/resizetizer/r/drawable/hood.jpg
 obj/Debug/net7.0-android/resizetizer/r/drawable/shopping_done.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/rapunzel.jpg
+obj/Debug/net7.0-android/resizetizer/r/drawable/categories.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/telefon.jpg
 obj/Debug/net7.0-android/resizetizer/r/drawable/watch.jpeg
 obj/Debug/net7.0-android/resizetizer/r/drawable/close.png

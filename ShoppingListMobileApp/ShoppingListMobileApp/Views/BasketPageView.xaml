@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShoppingListMobileApp.ViewModels"
+             x:Class="ShoppingListMobileApp.BasketPageView">
+
+    <ContentPage.BindingContext>
+        <viewModels:BasketPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <!-- Basket List -->
+        <ListView ItemsSource="{Binding Baskets}"
+                  SelectedItem="{Binding SelectedBasket}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Add Basket Button -->
+        <Button Text="Add Basket"
+                IsVisible="{Binding AddBasketButton}"
+                Command="{Binding AddBasketCommand}" />
+
+        <!-- Add Basket Form -->
+        <StackLayout IsVisible="{Binding IsAddingBasket}">
+            <Entry Placeholder="New Basket Name"
+                   Text="{Binding NewName}" />
+            <Button Text="Save"
+                    Command="{Binding SaveBasketCommand}" />
+            <Button Text="Cancel"
+                    Command="{Binding CancelAddBasketCommand}" />
+        </StackLayout>
+
+        <!-- Basket Actions -->
+        <StackLayout IsVisible="{Binding IsBasketSelected}">
+            <Button Text="Edit"
+                    Command="{Binding EditBasketCommand}" />
+            <Button Text="Delete"
+                    Command="{Binding DeleteBasketCommand}" />
+            <Button Text="View Details"
+                    Command="{Binding ViewBasketDetailsCommand}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -197,6 +197,7 @@ namespace ShoppingListMobileApp
                 PostalCode = NewPostalCode,
                 AddressText = NewAddressText
             });
+            OnPropertyChanged();
 
             // Yeni adres eklemeyi gizle ve formu sıfırla
             IsAddingAddress = false;

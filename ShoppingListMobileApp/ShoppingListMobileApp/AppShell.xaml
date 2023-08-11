@@ -83,6 +83,15 @@
         Title="Notifications Page"
         ContentTemplate="{DataTemplate local:NotificationsPageView}"
         Route="NotificationsPage" />
+    <ShellContent
+        Title="New Password Page"
+        ContentTemplate="{DataTemplate local:NewPasswordPageView}"
+        Route="NewPasswordPage" />
+    <ShellContent
+        Title="Basket Page"
+        ContentTemplate="{DataTemplate local:BasketPageView}"
+        Route="BasketPage" />
+    
     
     
     

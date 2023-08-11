@@ -51,7 +51,7 @@
                     <Image Source="password2.png" HeightRequest="20" WidthRequest="20"></Image>
                 </Frame>
                 <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Keyboard="Email"
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True"
                            Text="{Binding Password, Mode=TwoWay}"></Entry>
                 </Frame>
             </StackLayout>

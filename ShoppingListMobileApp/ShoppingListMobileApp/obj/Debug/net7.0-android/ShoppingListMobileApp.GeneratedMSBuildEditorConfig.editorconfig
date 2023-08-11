@@ -50,6 +50,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.View
 build_metadata.AdditionalFiles.TargetPath = Views/AddressPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/AddressPageView.xaml
 
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/BasketPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.BasketPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/BasketPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/BasketPageView.xaml
+
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/CartPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.CartPageView.xaml
@@ -73,6 +79,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.EditAddressPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/EditAddressPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/EditAddressPage.xaml
+
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/EditBasketPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.EditBasketPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EditBasketPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EditBasketPageView.xaml
 
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/EditPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -103,6 +115,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.ItemPageView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/ItemPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ItemPageView.xaml
+
+[/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/NewPasswordPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingListMobileApp.Views.NewPasswordPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/NewPasswordPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/NewPasswordPageView.xaml
 
 [/Users/basarcelebi/Projects/ShoppingListMobileApp/ShoppingListMobileApp/ShoppingListMobileApp/Views/NotificationsPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

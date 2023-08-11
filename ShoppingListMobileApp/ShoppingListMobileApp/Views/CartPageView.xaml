@@ -1,456 +1,229 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShoppingListMobileApp.ViewModels"
              x:Class="ShoppingListMobileApp.CartPageView"
              >
+    <ContentPage.BindingContext>
+        <viewModels:CartViewModel/>
+    </ContentPage.BindingContext>
+    
     <ScrollView>
+        <StackLayout Spacing="10" Padding="20">
+            <StackLayout>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+                <ListView ItemsSource="{Binding CartItems}"
+                          Grid.ColumnSpan="2"
+                          RowHeight="160"
+                          SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <!--<ColumnDefinition Width="1*"/>-->
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-            <!--Page title-->
+                                    <!-- products list -->
+                                    <Frame Grid.Column="0"
+                                           Grid.Row="1"
+                                           Margin="10"
+                                           BorderColor="LightGray"
+                                           HeightRequest="125"
+                                           WidthRequest="125"
+                                           HasShadow="True"
+                                           CornerRadius="20"
+                                           Padding="0"
+                                           x:Name="ImageFrame">
+                                        <Image HeightRequest="100"
+                                               WidthRequest="100"
+                                               HorizontalOptions="Center"
+                                               Aspect="AspectFill"
+                                               Source="{Binding ProductImage}"/>
+                                    </Frame>
 
-            <Label Text="Your Cart"
-               TextColor="Black"
-               Grid.Row="0"
-               Margin="0,5,5,5"
-               Grid.ColumnSpan="3"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"
-               Padding="5"
-               FontSize="Large"/>
+                                    <Frame Grid.Column="1" 
+                                           Grid.Row="1"
+                                           Padding="0"
+                                           BorderColor="Transparent"
+                                           HasShadow="True"
+                                           CornerRadius="10" 
+                                           HeightRequest="160"
+                                           x:Name="DetailFrame">
+                                        <StackLayout Spacing="10" Padding="10">
+                                            <Grid RowDefinitions="Auto"
+                                                  ColumnDefinitions="5*, 5*">
+                                                <StackLayout Grid.Column="0"
+                                                             Margin="0,30,0,0">
+                                                    <Label Text="{Binding ProductName}" FontSize="Medium"/>
+                                                    <Label Text="{Binding Description}" FontSize="Small"/>
+                                                    <Label Text="{Binding Price}" FontSize="Caption"/>    
+                                                </StackLayout>
 
-            <!-- products list -->
+                                                <StackLayout
+                                                    Margin="5,30,5,0"
+                                                    Grid.Column="1"
+                                                    VerticalOptions="Center">
+                                                    <Grid RowDefinitions="Auto"
+                                                          ColumnDefinitions="*, *, *">
+                                                        
+                                                        <Border  HeightRequest="30"
+                                                                 BackgroundColor="White"
+                                                                 WidthRequest="30"
+                                                                 Grid.Column="0"
+                                                                 StrokeShape="RoundRectangle 10 0 10 0">
+                                                            <Border.Shadow>
+                                                                <Shadow
+                                                                    Brush="black"
+                                                                    Offset="1,3"
+                                                                    Opacity=".3"/>
+                                                            </Border.Shadow>
+                                                            <ImageButton Source="minus.png"
+             Command="{Binding BindingContext.DecreaseQuantityCommand, Source={x:Reference CartListView}}"
+             CommandParameter="{Binding .}"
+             HeightRequest="10"
+             WidthRequest="10"/>
+                                                        </Border>
 
-            <Frame Grid.Column="0"
-                   Grid.Row="1"
-                   Margin="10"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   Padding="0"
-                   x:Name="ImageFrame">
-                <Image HeightRequest="160"
-                       WidthRequest="120"
-                       Source="{Binding Image}"/>
-            </Frame>
-            <Frame Grid.Column="1" 
-                   Grid.Row="1"
-                   Padding="0"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   HeightRequest="160"
-                   x:Name="DetailFrame"
-                   >
-                <StackLayout>
-                    <StackLayout Margin="15,0">
-                        <Label Text="{Binding Name}" FontSize="Medium"
-                           Margin="0,20,0,0"/>
-                        <Label Text="{Binding Description}" FontSize="Small"/>
-                        <Label Text="{Binding Price}" FontSize="Small"/>
-                    </StackLayout>
+                                                        <Border HeightRequest="30"
+                                                                BackgroundColor="OrangeRed"
+                                                                WidthRequest="30"
+                                                                Grid.Column="1">
+                                                            <Label x:Name="count" 
+                                                                   Text="{Binding Quantity}"
+                                                                   Margin="10, 3, 10, 0"/>
+                                                        </Border>
 
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                           Margin="0,20,0,0">
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                HasShadow="True"
-                                CornerRadius="0">
-                            <ImageButton Source="minus.png"
-                                         Clicked="ImageButton_Decrease"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                        <Label x:Name="count" Text="1"
-                               Margin="7,0,7,0"/>
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                HasShadow="True"
-                                CornerRadius="0">
-                            <ImageButton Source="plus2.png"
-                                         Clicked="ImageButton_Increase"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                    </HorizontalStackLayout>
+                                                        <Border  HeightRequest="30"
+                                                                 BackgroundColor="White"
+                                                                 WidthRequest="30"
+                                                                 Grid.Column="2"
+                                                                 StrokeShape="RoundRectangle 0 10 0 10">
+                                                            <Border.Shadow>
+                                                                <Shadow
+                                                                    Brush="black"
+                                                                    Offset="1,3"
+                                                                    Opacity=".3"/>
+                                                            </Border.Shadow>
+                                                            <ImageButton Source="plus2.png"
+             Command="{Binding BindingContext.IncreaseQuantityCommand, Source={x:Reference CartListView}}"
+             CommandParameter="{Binding .}"
+             HeightRequest="10"
+             WidthRequest="10"/>
+                                                        </Border>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+                <StackLayout Padding="0, 10, 0, 10">
+                    <Line Stroke="lightgray" X2="400" StrokeThickness="2"/>
                 </StackLayout>
-            </Frame>
-            <Frame Grid.Column="2"
-                   Grid.Row="1"
-                   BackgroundColor="LightGray"
-                   HasShadow="True"
-                   HeightRequest="10"
-                   WidthRequest="10"
-                   CornerRadius="0"
-                   BorderColor="Red"
-                   x:Name="ButtonCloseFrame">
-                <ImageButton Source="close.png"
-                             HeightRequest="10"
-                             WidthRequest="10"
-                             Clicked="ImageButton_Close"/>
 
-            </Frame>
-
-            <!--product2-->
-
-            <Frame Grid.Column="0"
-                   Grid.Row="2"
-                   Margin="10"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   Padding="0">
-                <Image HeightRequest="160"
-                       WidthRequest="120"
-                       Source="airpods.jpeg"/>
-            </Frame>
-            <Frame Grid.Column="1" 
-                   Grid.Row="2"
-                   Padding="0"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   HeightRequest="160"
-                   >
                 <StackLayout>
-                    <StackLayout Margin="15,0">
-                        <Label Text="Apple" FontSize="Medium"
-                           Margin="0,20,0,0"/>
-                        <Label Text="Airpods" FontSize="Small"/>
-                        <Label Text="300$" FontSize="Small"/>
-                    </StackLayout>
-
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                           Margin="0,20,0,0">
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="minus.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                        <Label Text="2"
-                               Margin="7,0,7,0"/>
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="plus2.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Column="2"
-                   Grid.Row="2"
-                   BackgroundColor="LightGray"
-                   HasShadow="True"
-                   HeightRequest="10"
-                   WidthRequest="10"
-                   CornerRadius="0"
-                   BorderColor="Red">
-                <ImageButton Source="close.png"
-                             HeightRequest="10"
-                             WidthRequest="10"/>
-
-            </Frame>
-
-            <!--product3-->
-
-            <Frame Grid.Column="0"
-                   Grid.Row="3"
-                   Margin="10"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   Padding="0">
-                <Image HeightRequest="160"
-                       WidthRequest="120"
-                       Source="telefon.jpg"/>
-            </Frame>
-            <Frame Grid.Column="1" 
-                   Grid.Row="3"
+                    <Frame 
+                    Margin="15,10,10,15"
                    Padding="0"
-                   BorderColor="Red"
+                   BorderColor="LightGray"
                    HasShadow="True"
                    CornerRadius="10"
-                   HeightRequest="160"
-                   >
-                <StackLayout>
-                    <StackLayout Margin="15,0">
-                        <Label Text="Apple" FontSize="Medium"
-                           Margin="0,20,0,0"/>
-                        <Label Text="Iphone 14 Pro Max" FontSize="Small"/>
-                        <Label Text="1199$" FontSize="Small"/>
-                    </StackLayout>
-
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                           Margin="0,20,0,0">
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="minus.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                        <Label Text="1"
-                               Margin="7,0,7,0"/>
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="plus2.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Column="2"
-                   Grid.Row="3"
-                   BackgroundColor="LightGray"
-                   HasShadow="True"
-                   HeightRequest="10"
-                   WidthRequest="10"
-                   CornerRadius="0"
-                   BorderColor="Red">
-                <ImageButton Source="close.png"
-                             HeightRequest="10"
-                             WidthRequest="10"/>
-
-            </Frame>
-
-            <!--product4-->
-            <Frame Grid.Column="0"
-                   Grid.Row="4"
-                   Margin="10"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   Padding="0">
-                <Image HeightRequest="160"
-                       WidthRequest="120"
-                       Source="watch.jpeg"/>
-            </Frame>
-            <Frame Grid.Column="1" 
-                   Grid.Row="4"
-                   Padding="0"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   HeightRequest="160"
-                   >
-                <StackLayout>
-                    <StackLayout Margin="15,0">
-                        <Label Text="Apple" FontSize="Medium"
-                           Margin="0,20,0,0"/>
-                        <Label Text="Watch Series 8" FontSize="Small"/>
-                        <Label Text="399$" FontSize="Small"/>
-                    </StackLayout>
-
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                           Margin="0,20,0,0">
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="minus.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                        <Label Text="2"
-                               Margin="7,0,7,0"/>
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                CornerRadius="0"
-                                HasShadow="True">
-                            <ImageButton Source="plus2.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Column="2"
-                   Grid.Row="4"
-                   BackgroundColor="LightGray"
-                   HasShadow="True"
-                   HeightRequest="10"
-                   WidthRequest="10"
-                   CornerRadius="0"
-                   BorderColor="Red">
-                <ImageButton Source="close.png"
-                             HeightRequest="10"
-                             WidthRequest="10"/>
-
-            </Frame>
-
-            <!--product5-->
-
-            <Frame Grid.Column="0"
-                   Grid.Row="5"
-                   Margin="10"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   Padding="0">
-                <Image HeightRequest="160"
-                       WidthRequest="120"
-                       Source="rapunzel.jpg"/>
-            </Frame>
-            <Frame Grid.Column="1" 
-                   Grid.Row="5"
-                   Padding="0"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   HeightRequest="160"
-                   >
-                <StackLayout>
-                    <StackLayout Margin="15,0">
-                        <Label Text="Princes" FontSize="Medium"
-                           Margin="0,20,0,0"/>
-                        <Label Text="Rapunzel" FontSize="Small"/>
-                        <Label Text="-$" FontSize="Small"/>
-                    </StackLayout>
-
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                           Margin="0,20,0,0">
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                WidthRequest="10"
-                                HasShadow="True"
-                                CornerRadius="0">
-                            <ImageButton Source="minus.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                        <Label Text="1"
-                               Margin="7,0,7,0"/>
-                        <Frame  HeightRequest="10"
-                                BackgroundColor="LightGray"
-                                HasShadow="True"
-                                WidthRequest="10"
-                                CornerRadius="0">
-                            <ImageButton Source="plus2.png"
-                                 HeightRequest="10"
-                                 WidthRequest="10"/>
-                        </Frame>
-                    </HorizontalStackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Column="2"
-                   Grid.Row="5"
-                   BackgroundColor="LightGray"
-                   HasShadow="True"
-                   HeightRequest="10"
-                   WidthRequest="10"
-                   CornerRadius="0"
-                   BorderColor="Red">
-                <ImageButton Source="close.png"
-                             HeightRequest="10"
-                             WidthRequest="10"/>
-
-            </Frame>
-
-            <Frame Grid.ColumnSpan="3" 
-                   Grid.Row="6"
-                   Margin="15,10,10,15"
-                   Padding="0"
-                   BorderColor="Red"
-                   HasShadow="True"
-                   CornerRadius="10"
-                   WidthRequest="250"
                    HeightRequest="50">
-                <HorizontalStackLayout Margin="5">
-                    <Label Text="Total: "
-                           VerticalOptions="Center"
-                       FontSize="Medium"
-                           Margin="5,0,0,0"/>
-                    <Label Text="9999$"
-                           VerticalOptions="Center"
-                           FontSize="Medium"/>
-                    <Button Text="CHECKOUT"
-                            TextColor="Black"
-                            Margin="20,0,0,0"
-                            FontSize="9"
-                            FontAttributes="Bold"
-                            BackgroundColor="LightGray"
-                            CornerRadius="10"
-                            HeightRequest="30"
-                            WidthRequest="100"
-                            Clicked="Button_Clicked_Checkout"/>
-                </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Button Text="Clear Cart"
+        TextColor="Black"
+        BackgroundColor="LightGray"
+        HorizontalOptions="Center"
+        FontSize="9"
+        CornerRadius="0"
+        FontAttributes="Bold"
+        HeightRequest="50"
+        WidthRequest="200"
+        Clicked="ClearCart_Clicked"/>
+                            <Button Text="CHECKOUT"
+                                TextColor="Black"
+                                    BackgroundColor="OrangeRed"
+                                    HorizontalOptions="Center"
+                                FontSize="9"
+                                    CornerRadius="0"
+                                FontAttributes="Bold"
+                                HeightRequest="50"
+                                WidthRequest="200"
+                                Clicked="Button_Clicked_Checkout"/>
 
+                            <Label Text="{Binding NewTotalPrice}"
+                                   Margin="45,0,0,0"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                                   FontSize="Medium"/>
+                            
+                        </HorizontalStackLayout>
+                    </Frame>
+                </StackLayout>
 
-            </Frame>
+            </StackLayout>
 
+            <StackLayout Padding="0, 0, 0, 10">
+                <Line Stroke="lightgray" X2="400" StrokeThickness="2"/>
+            </StackLayout>
 
             <!--tab bar-->
-
-            <Grid Grid.Row="7"
+            <StackLayout>
+                <Grid 
                   Grid.ColumnSpan="3"
                   Margin="15,0,15,10"
                   HeightRequest="75"
                   VerticalOptions="End">
-                <Border
+                    <Border
                     BackgroundColor="White"
                     Stroke="red"
                     StrokeShape="RoundRectangle 30,30,30,30"
                     StrokeThickness="2">
-                    <Grid ColumnDefinitions="*,*,*,*"
+                        <Grid ColumnDefinitions="*,*,*,*"
                           RowDefinitions="*,*"
                           RowSpacing="3">
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                                FontSize="10"
                                HorizontalOptions="Center"
                                Text="Home"
                                TextColor="Red"></Label>
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                                Grid.Column="1"
                                FontSize="10"
                                HorizontalOptions="Center"
                                Text="Search"
                                TextColor="Red"></Label>
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                                Grid.Column="2"
                                FontSize="10"
                                HorizontalOptions="Center"
                                Text="Cart"
                                TextColor="Red"></Label>
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                                Grid.Column="3"
                                FontSize="10"
                                HorizontalOptions="Center"
                                Text="Profile"
                                TextColor="Red"></Label>
-                        <Button FontFamily="Icons"
+                            <Button FontFamily="Icons"
                                FontSize="20"
                                HorizontalOptions="Center"
                                Text="&#xE80D;"
@@ -459,7 +232,7 @@
                                Clicked="Button_Clicked_Home"
                                BackgroundColor="Transparent"
                                BorderColor="Transparent"></Button>
-                        <Button FontFamily="Icons"
+                            <Button FontFamily="Icons"
                                Grid.Column="1"
                                FontSize="20"
                                HorizontalOptions="Center"
@@ -469,14 +242,14 @@
                                BackgroundColor="Transparent"
                                BorderColor="Transparent"
                                Clicked="Button_Clicked_Search"></Button>
-                        <Label FontFamily="Icons"
+                            <Label FontFamily="Icons"
                                Grid.Column="2"
                                FontSize="20"
                                HorizontalOptions="Center"
                                Text="&#xE823;"
                                TextColor="Red"
                                VerticalOptions="End"></Label>
-                        <Button Grid.Column="3" FontFamily="Icons" FontSize="25" 
+                            <Button Grid.Column="3" FontFamily="Icons" FontSize="25" 
                                 VerticalOptions="End" HorizontalOptions="Center" 
                                 Text="&#xE801;" TextColor="Red" 
                                 BackgroundColor="Transparent" BorderColor="Transparent"
@@ -486,14 +259,15 @@
 
 
 
-                    </Grid>
+                        </Grid>
 
-                </Border>
+                    </Border>
 
 
-            </Grid>
+                </Grid>
+            </StackLayout>
 
-        </Grid>
 
+        </StackLayout>
     </ScrollView>
 </ContentPage>
