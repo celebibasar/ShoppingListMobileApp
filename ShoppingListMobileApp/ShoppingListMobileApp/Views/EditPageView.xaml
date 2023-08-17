@@ -41,7 +41,7 @@
 
                         </Frame>
                         <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                            <Entry Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="celebibasar" Keyboard="Email"></Entry>
+                            <Entry x:Name="UsernameEntry" Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="Username" Keyboard="Text" Text="{Binding User.Username}" />
 
                         </Frame>
 
@@ -52,7 +52,7 @@
 
                     </Frame>
                     <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                        <Entry Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="******" IsPassword="True" Keyboard="Email"></Entry>
+                        <Entry x:Name="PasswordEntry" Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Text="{Binding User.Password}" />
 
                     </Frame>
         
@@ -64,7 +64,7 @@
 
                     </Frame>
                     <Frame HeightRequest="45" Margin="-20,0,0,0" HasShadow="True" Padding="0" BorderColor="White" HorizontalOptions="FillAndExpand">
-                        <Entry Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="basarcelebi02@gmail.com" IsPassword="False" Keyboard="Email"></Entry>
+                        <Entry x:Name="EmailEntry" Margin="20,0,0,0" IsReadOnly="False" VerticalOptions="Center" Placeholder="Email" Text="{Binding User.Email}" />
 
                     </Frame>
         
